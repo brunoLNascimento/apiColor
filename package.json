@@ -1,14 +1,16 @@
 {
-  "name": "collor",
+  "name": "color",
   "version": "1.0.0",
-  "description": "api collor",
+  "description": "api color",
   "main": "index.js",
   "dependencies": {
     "axios": "^0.21.1",
     "body-parse": "^0.1.0",
     "consign": "^0.1.6",
     "express": "^4.17.1",
-    "express-load": "^1.1.16"
+    "express-load": "^1.1.16",
+    "mongodb": "^3.6.3",
+    "mongoose": "^5.11.13"
   },
   "devDependencies": {},
   "scripts": {
@@ -16,12 +18,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/brunoLNascimento/apiCollor.git"
+    "url": "git+https://github.com/brunoLNascimento/apicolor.git"
   },
   "author": "Bruno Lima do Nascimento",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/brunoLNascimento/apiCollor/issues"
+    "url": "https://github.com/brunoLNascimento/apicolor/issues"
   },
-  "homepage": "https://github.com/brunoLNascimento/apiCollor#readme"
+  "homepage": "https://github.com/brunoLNascimento/apicolor#readme"
 }
