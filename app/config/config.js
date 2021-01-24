@@ -9,7 +9,8 @@ const config = {
                 auto_reconnect: true
             }
         }
-    }
+    },
+    limit: 10
 }
 
 module.exports = config;
