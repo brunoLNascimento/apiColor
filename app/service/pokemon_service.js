@@ -1,5 +1,4 @@
-const { query } = require("express")
-const { findBy } = require("../repository/pokemon_repository")
+const { findBy } = require("../repository/repository")
 
 module.exports = { 
     async findPokemonBy(pokemon){
@@ -21,7 +20,7 @@ module.exports = {
         try {
             let query = { };
             let skip = page * 10;            
-            return findBy(query, page, skip);
+            return findBy(query, skip);
         } catch (error) {
             throw error;            
         }

@@ -1,4 +1,4 @@
-const { findPokemon } = require("../service/service");
+const { findPokemon } = require("../service/pokemon_service");
 
 module.exports = {
     async findPokemon(req, res){
