@@ -1,11 +1,10 @@
-const randomHexColor = require('random-hex-color');
 const { findcolor } = require("../service/color_service");
 
 module.exports = {
     async findcolor(req, res){
         try {
             let body = req.body;
-            let response = findcolor(body);
+            let response = await findcolor(body);
             return res.status(200).send(response);
         } catch (error) {
             console.log(error);

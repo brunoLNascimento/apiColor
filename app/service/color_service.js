@@ -1,4 +1,7 @@
+const mongoose = require('mongoose');
+const Color = mongoose.model('Color');
 const { savePokemon } = require("../repository/repository");
+const randomHexColor = require('random-hex-color');
 
 module.exports = { 
     async findcolor(body){
@@ -6,9 +9,9 @@ module.exports = {
             colorRandom(body);
             let built = buildModel(body);
             savePokemon(built);
-            return body;
+            return [body]; //ajustar
         } catch (error) {
-            
+            throw error;
         }
     }
 }
@@ -28,5 +31,5 @@ function colorRandom(body){
         element.color = randomHexColor();
     });
 
-    return [body];
+    return body;
 }
