@@ -9,12 +9,17 @@
     "consign": "^0.1.6",
     "express": "^4.17.1",
     "express-load": "^1.1.16",
+    "mongo": "^0.1.0",
+    "mongod": "^2.0.0",
     "mongodb": "^3.6.3",
-    "mongoose": "^5.11.13"
+    "mongoose": "^5.11.13",
+    "nodemon": "^2.0.7",
+    "random-hex-color": "^1.0.1"
   },
   "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
   },
   "repository": {
     "type": "git",
