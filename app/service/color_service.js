@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const Color = mongoose.model('Color');
 const { savePokemon } = require("../repository/repository");
-const randomHexColor = require('random-hex-color');
+const randomColor = require("randomcolor");
 
 module.exports = { 
     async findcolor(body){
@@ -28,8 +28,26 @@ function buildModel(body){
 
 function colorRandom(body){
     body.type.forEach(element => {
-        element.color = randomHexColor();
+        let color = typeColor(element.name)
+        element.color = randomColor({ count: 1, hue: color});
     });
 
     return body;
+}
+
+function typeColor(name){
+    let color;
+    if(name == "water")
+        color = "blue"
+    else if(name == "grass")
+        color = "green"
+    else if(name == "fire")
+        color = "red"
+    else if(name == "flying")
+        color = "blue"
+    else if(name == "eletric")
+        color = "yellow"
+    else if( name == "poison")
+        color = "purple"
+    return color;
 }
