@@ -21,8 +21,7 @@
   "devDependencies": {},
   "scripts": {
     "test": "mocha --timeout 30000 test/**/*.js",
-    "start": "nodemon server.js",
-    "swagger-autogen": "node swagger.js"
+    "start": "nodemon server.js"
   },
   "repository": {
     "type": "git",
