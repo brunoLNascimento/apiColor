@@ -12,16 +12,16 @@ $ npm start -- Rodar o sistema.
 $ npm test -- Executar os testes do sistema.
 ```
 1. Get: localhost:3000/findPokemon/:pokemon - pode ser ID ou nome pokemon
-       - Endpoint para buscar Pokemon na base, busca pode ser feita pelo id ou pelo nome
+- Endpoint para buscar Pokemon na base, busca pode ser feita pelo id ou pelo nome
 
 2. Get: localhost:3000/findAllPokemon/:page
-       - Endpoint para buscar todos Pokemons na base, busca limitada a 10 itens por página
+- Endpoint para buscar todos Pokemons na base, busca limitada a 10 itens por página
 
 3. Delete: localhost:3000/deletePokemon/:pokemon
-       - Endpoint para deletar o Pokemon: pode ser enviado ID ou nome do pokemon
+- Endpoint para deletar o Pokemon: pode ser enviado ID ou nome do pokemon
 
 4. Post: localhost:3000/colorBy/
-       - Endpoint (esse endPoint é um post, pois decedir salvar o conteúdo consultado na pokApi e salvar na base, dessa forma, iremos agilizar o processo de consulta) para encontrar a cor do Pokemon, de forma randomico de acordo com o tipo do pokemon, e sem seguida salvar na base. OBS: o body está em test.js
+- Endpoint (esse endPoint é um post, pois decedir salvar o conteúdo consultado na pokApi e salvar na base, dessa forma, iremos agilizar o processo de consulta) para encontrar a cor do Pokemon, de forma randomico de acordo com o tipo do pokemon, e sem seguida salvar na base. OBS: o body está em test.js
   
  ## OBS
  * Docker: não consegui colocar o mongo para iniciar.
