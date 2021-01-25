@@ -17,9 +17,30 @@
   "paths": {
     "/colorBy/": {
       "post": {
-        "tags": [],
-        "description": "",
-        "parameters": [],
+        "tags": [
+          "findcolor"
+        ],
+        "description": "Endpoint para encontrar a cor do Pokemon e sem seguida salvar na base",
+        "parameters": [
+          {
+            "name": "name",
+            "description": "Nome do pokemon.",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "id",
+            "description": "ID do pokemon.",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "filtro",
+            "description": "A cor é criada de forma randomica de acordo com o type do pokemon, é salvo na base para buscas futuras",
+            "in": "query",
+            "type": "string"
+          }
+        ],
         "responses": {
           "200": {
             "description": "OK"
@@ -32,13 +53,27 @@
     },
     "/findPokemon/{pokemon}": {
       "get": {
-        "tags": [],
-        "description": "",
+        "tags": [
+          "findPokemon"
+        ],
+        "description": "Endpoint para buscar Pokemon na base",
         "parameters": [
           {
             "name": "pokemon",
             "in": "path",
             "required": true,
+            "type": "string"
+          },
+          {
+            "name": "name",
+            "description": "Nome do pokemon.",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "id",
+            "description": "ID do pokemon.",
+            "in": "query",
             "type": "string"
           }
         ],
@@ -51,13 +86,21 @@
     },
     "/findAllPokemon/{page?}": {
       "get": {
-        "tags": [],
-        "description": "",
+        "tags": [
+          "findAllPokemon"
+        ],
+        "description": "Endpoint para buscar todos os Pokemon na base, limite de resultado por página 10",
         "parameters": [
           {
             "name": "page?",
             "in": "path",
             "required": true,
+            "type": "string"
+          },
+          {
+            "name": "page",
+            "description": "Não obrigatório, caso não seja enviado nenhum número: setado página 0",
+            "in": "query",
             "type": "string"
           }
         ],
@@ -73,8 +116,10 @@
     },
     "/deletePokemon/{pokemon}": {
       "delete": {
-        "tags": [],
-        "description": "",
+        "tags": [
+          "delete"
+        ],
+        "description": "Endpoint para deletar o Pokemon: pode ser enviado ID ou nome",
         "parameters": [
           {
             "name": "pokemon",
