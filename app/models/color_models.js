@@ -11,7 +11,7 @@ pokemonModel.set('toJSON', {
     transform: function( doc, ret ){   
         return ret = { 
             name: ret.name,
-            idPokemon: ret.idPokemon,
+            id: ret.idPokemon,
             types: ret.types
         }
     },

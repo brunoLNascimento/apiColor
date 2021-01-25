@@ -2,7 +2,6 @@ const app = require('../app');
 const mongoose = require('mongoose');
 const request = require('supertest');
 const config = require('../app/config/config');
-const nodemon = require('nodemon');
 
 mongoose.connect(config.db.urlTest, config.db.option);
 
