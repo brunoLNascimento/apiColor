@@ -1,0 +1,34 @@
+{
+  "name": "color",
+  "version": "1.0.0",
+  "description": "api color",
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "body-parse": "^0.1.0",
+    "consign": "^0.1.6",
+    "express": "^4.17.1",
+    "express-load": "^1.1.16",
+    "mongo": "^0.1.0",
+    "mongod": "^2.0.0",
+    "mongodb": "^3.6.3",
+    "mongoose": "^5.11.13",
+    "nodemon": "^2.0.7",
+    "randomcolor": "^0.6.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brunoLNascimento/apicolor.git"
+  },
+  "author": "Bruno Lima do Nascimento",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/brunoLNascimento/apicolor/issues"
+  },
+  "homepage": "https://github.com/brunoLNascimento/apicolor#readme"
+}
