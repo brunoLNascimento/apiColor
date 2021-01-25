@@ -1,13 +1,13 @@
 const mongoose = require('mongoose'),
     Schema = mongoose.Schema;
 
-const color = new Schema({
+const pokemonModel = new Schema({
     name:  { type: String },
     idPokemon: { type: Number },
     types: []
 });
 
-color.set('toJSON', {
+pokemonModel.set('toJSON', {
     transform: function( doc, ret ){   
         return ret = { 
             name: ret.name,
@@ -21,4 +21,4 @@ color.set('toJSON', {
 
 
 
-mongoose.model('Color', color);
+mongoose.model('PokemonModel', pokemonModel);

@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const Color = mongoose.model('Color');
+const PokemonModel = mongoose.model('PokemonModel');
 const { savePokemon } = require("../repository/repository");
 const { getColor } = require("../helper/helper");
 
@@ -17,13 +17,13 @@ module.exports = {
 }
 
 function buildModel(body){
-    let color = new Color({
+    let pokemon = new PokemonModel({
         name :  body.name,
         idPokemon: body.id,
         types : body.type
     })
 
-    return color;
+    return pokemon;
 }
 
 function colorRandom(body){
